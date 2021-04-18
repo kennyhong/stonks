@@ -48,64 +48,6 @@ An application developed as part of a challenge
 │                       │   └── StockRepositoryIntegrationTests.java
 │                       └── mocks
 │                           └── MockStocks.java
-├── stonks.iml
-└── target
-    ├── classes
-    │   ├── application.properties
-    │   └── com
-    │       └── kennyhong
-    │           └── stonks
-    │               ├── StonksApplication.class
-    │               ├── controller
-    │               │   └── StocksController.class
-    │               ├── helper
-    │               │   ├── CSVHelper.class
-    │               │   ├── HeaderConstants.class
-    │               │   └── StockBean.class
-    │               ├── model
-    │               │   └── Stock.class
-    │               ├── repository
-    │               │   └── StocksRepository.class
-    │               ├── response
-    │               │   ├── GenericResponse.class
-    │               │   └── StockResponse.class
-    │               └── service
-    │                   └── StocksService.class
-    ├── generated-sources
-    │   └── annotations
-    ├── generated-test-sources
-    │   └── test-annotations
-    ├── maven-archiver
-    │   └── pom.properties
-    ├── maven-status
-    │   └── maven-compiler-plugin
-    │       ├── compile
-    │       │   └── default-compile
-    │       │       ├── createdFiles.lst
-    │       │       └── inputFiles.lst
-    │       └── testCompile
-    │           └── default-testCompile
-    │               ├── createdFiles.lst
-    │               └── inputFiles.lst
-    ├── stonks-0.0.1-SNAPSHOT.jar
-    ├── stonks-0.0.1-SNAPSHOT.jar.original
-    ├── surefire-reports
-    │   ├── TEST-com.kennyhong.stonks.StonksApplicationTests.xml
-    │   ├── TEST-com.kennyhong.stonks.integration.StockRepositoryIntegrationTests.xml
-    │   ├── com.kennyhong.stonks.StonksApplicationTests.txt
-    │   └── com.kennyhong.stonks.integration.StockRepositoryIntegrationTests.txt
-    └── test-classes
-        └── com
-            └── kennyhong
-                └── stonks
-                    ├── StonksApplicationTests$Initializer.class
-                    ├── StonksApplicationTests.class
-                    ├── integration
-                    │   ├── StockRepositoryIntegrationTests$Initializer.class
-                    │   └── StockRepositoryIntegrationTests.class
-                    └── mocks
-                        └── MockStocks.class
-
 ```
 
 ## Tech Used
