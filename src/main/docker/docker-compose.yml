@@ -1,0 +1,45 @@
+version: '2'
+
+services:
+  postgres:
+    image: 'postgres:13.2-alpine'
+    container_name: postgres
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=stonksadmin
+      - POSTGRES_PASSWORD=stonksadmin
+      - POSTGRES_DB=stonks
+    ports:
+      - 5432:5432
+    expose:
+      - 5432
+    restart: unless-stopped
+    networks:
+      - stonks-network
+  app:
+    image: 'stonks:latest'
+    ports:
+      - 8081:8080
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: stonks
+    expose:
+      - 8080
+      - 8081
+    depends_on:
+      - postgres
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/postgres
+      - SPRING_DATASOURCE_USERNAME=stonksadmin
+      - SPRING_DATASOURCE_PASSWORD=stonksadmin
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+    restart: unless-stopped
+    networks:
+      - stonks-network
+volumes:
+  postgres_data:
+networks:
+  stonks-network:
+    driver: bridge
