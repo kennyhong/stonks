@@ -143,6 +143,9 @@ Future iterations of this project would include those tests as well as other tes
 
 ## Fresh Installation
 
+    NOTE: The server starts on port 8080 BUT to make calls you'll have to use port 8081
+    ie. http://localhost:8081/stocks
+
 **A `jar` file is already included in this project, so you can just navigate to the docker folder and run 
 `docker-compose up --build`. See the final step of this section to get started!**
 
